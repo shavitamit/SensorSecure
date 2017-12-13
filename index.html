@@ -1,1 +1,143 @@
-Hello Branch
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/d3.v3.min.js" charset="utf-8"></script>
+   <script src="js/d3.min.js"></script>
+
+
+	<script src="map.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+
+/* On mouse hover, lighten state color */
+path:hover {
+	fill-opacity: .7;
+}
+body {
+	background: #666666;
+}
+/* Style for Custom Tooltip */
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+    border: 0px;
+    pointer-events: none;
+    color: white;
+    padding: 5px;
+    border: solid 1px white;
+    font-size: 13px;    z-index: 10000000;
+
+}
+path .active {
+  fill: orange;
+}
+iframe {
+  opacity: 1
+}     
+
+.map-background {
+    background: rgba(99, 98, 98, 0.8);
+   width: 100vw;
+ height: 100vh;
+    margin: 0 auto;
+}
+/* Legend Font Style */
+
+        
+/* Legend Position Style */
+.legend {
+    position: absolute;
+    left: 49px;
+    top: -102px;
+    background: rgba(255, 255, 255, 0.86);
+    height: 80px;
+    padding: 10px;
+    /* border-radius: 0 0 10px; */
+    /* box-shadow: 3px 3px 0 0px #afafaf; */
+    font-size: 14px;
+    width: 174px;
+}
+
+</style>
+</head>
+<body>
+
+<header>SensorSecure<div class="menu-button-container">
+		<div id="close-menu" class="invisible">❯</div>
+	<div id="open-menu" class="visible">
+		<div class="menu-icon"></div>
+		<div class="menu-icon"></div>
+		<div class="menu-icon"></div>
+	</div>
+
+</div >	
+<div class="filter"> Search Parameters:
+<select name="" id="">
+  <option value="tsrp">GR-SRTP</option>
+  <option value="tsrp">Scada</option>
+  <option value="tsrp">EGD</option>
+  <option value="tsrp">s7</option>
+  <option value="tsrp">CODESYS</option>
+</select>
+</div>
+</header>
+<!--  HTML for Side menu navigation -->
+<nav>
+	<ol class="menu">
+
+        
+       <!-- <li>
+         
+          <div id="menu-1" class="header"><span>ACTIVE IPs</span>
+
+       </div>
+       <div class="content-open" id="ip">
+          
+       </div>
+        </li>
+        <li>
+          <div id="menu-2"  class="header"><span>URL</span>
+
+       </div>
+       <div class="content" id="url">
+           
+       </div>-->
+        </li>
+        <li>
+          <div id="menu-3" class="header"><span>AFFECTED LOCATIONS</span>
+
+       </div>
+       <div class="content-opem" id="type">
+        
+       </div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav><a class="powered" href="#" >Powered by Team Octane</a>
+<div class="upper-dashboard">
+
+<!--<div id="left"></div>-->
+
+<div class="map-background">
+<div id="map"></div>
+<h1>18 Vulnerable Locations</h1>
+</div>
+
+<!--<div id="right"></div>-->
+</div>
+<!--
+<div class="lower-dashboard">
+	<div id="start"></div>
+	<div id="end"></div>
+</div>
+-->
+</body>
+</html><script src="js/menu.js"></script>
